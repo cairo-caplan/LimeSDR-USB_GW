@@ -644,7 +644,7 @@ END COMPONENT;
 --END COMPONENT;
 
 component soc_wrapper
-	generic(cpu_name : string := "orca");
+	generic(cpu_name : string := "pulpino_riscv");
 	port(
 		clk100            : in    std_logic;
 		exfifo_if_d       : in    std_logic_vector(31 downto 0);
@@ -1407,7 +1407,7 @@ reset_n => fpga_reset_n,
 
 b2v_inst42 : soc_wrapper
 		generic map(
-			cpu_name => "orca"
+			cpu_name => "pulpino_riscv"
 		)
 		port map(
 			clk100 => fx3_clk,

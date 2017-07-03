@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# hsi v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:19:00 MDT 2015
+# 
+# Start of session at: Mon Jun 26 18:13:57 2017
+# Process ID: 11446
+# Log file: /home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/hsi.log
+# Journal file: /home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/hsi.jou
+#-----------------------------------------------------------
+source ./fsbl.tcl

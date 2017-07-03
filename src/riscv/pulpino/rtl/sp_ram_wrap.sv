@@ -16,7 +16,6 @@ module sp_ram_wrap
     parameter ADDR_WIDTH = $clog2(RAM_SIZE),
     parameter DATA_WIDTH = 32
   )(
-    // Clock and Reset
     input  logic                    clk,
     input  logic                    rstn_i,
     input  logic                    en_i,
@@ -29,18 +28,31 @@ module sp_ram_wrap
   );
 
 `ifdef PULP_FPGA_EMUL
-  xilinx_mem_8192x32
-  sp_ram_i
-  (
-    .clka   ( clk                    ),
-    .rsta   ( 1'b0                   ), // reset is active high
-
-    .ena    ( en_i                   ),
-    .addra  ( addr_i[ADDR_WIDTH-1:2] ),
-    .dina   ( wdata_i                ),
-    .douta  ( rdata_o                ),
-    .wea    ( be_i & {4{we_i}}       )
-  );
+	simple_ram
+	  #(
+	    .ADDR_WIDTH ( ADDR_WIDTH ),
+	    .DATA_WIDTH ( DATA_WIDTH )
+	  )
+	  sp_ram_i
+	  (
+	    .clk     ( clk         				 ),
+	    .addr_i  ( addr_i       				 ),
+	    .wdata_i ( wdata_i      				 ),
+	    .rdata_o ( rdata_o      				 ),
+	    .we_i    ( be_i & we_i  & en_i )
+	  );
+//  xilinx_mem_8192x32
+//  sp_ram_i
+//  (
+//    .clka   ( clk                    ),
+//    .rsta   ( 1'b0                   ), // reset is active high
+//
+//    .ena    ( en_i                   ),
+//    .addra  ( addr_i[ADDR_WIDTH-1:2] ),
+//    .dina   ( wdata_i                ),
+//    .douta  ( rdata_o                ),
+//    .wea    ( be_i & {4{we_i}}       )
+//  );
 
   // TODO: we should kill synthesis when the ram size is larger than what we
   // have here
@@ -87,5 +99,49 @@ module sp_ram_wrap
     .be_i    ( be_i      )
   );
 `endif
+
+endmodule
+
+module simple_ram
+#(
+	parameter DATA_WIDTH=8, 
+	parameter ADDR_WIDTH=6)
+(
+	input clk,
+	input [(DATA_WIDTH-1):0] wdata_i,
+	input [(ADDR_WIDTH-1):0] addr_i,
+	input we_i,
+	output [(DATA_WIDTH-1):0] rdata_o
+);
+
+	// Declare the RAM variable
+	reg [DATA_WIDTH-1:0] ram[2**ADDR_WIDTH-1:0];
+
+	// Variable to hold the registered read address
+	reg [ADDR_WIDTH-1:0] addr_reg;
+
+	// Specify the initial contents.  You can also use the $readmemb
+	// system task to initialize the RAM variable from a text file.
+	// See the $readmemb template page for details.
+	initial 
+	begin : INIT
+		integer i;
+		for(i = 0; i < 2**ADDR_WIDTH; i = i + 1)
+			ram[i] = {DATA_WIDTH{1'b1}};
+	end 
+
+	always @ (posedge clk)
+	begin
+		// Write
+		if (we_i)
+			ram[addr_i] <= wdata_i;
+
+		addr_reg <= addr_i;
+	end
+
+	// Continuous assignment implies read returns NEW data.
+	// This is the natural behavior of the TriMatrix memory
+	// blocks in Single Port mode.  
+	assign rdata_o = ram[addr_reg];
 
 endmodule

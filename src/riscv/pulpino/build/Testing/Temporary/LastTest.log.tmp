@@ -1,0 +1,73 @@
+Start testing: Jun 26 17:08 CEST
+----------------------------------------------------------
+1/66 Testing: helloworld.test
+1/66 Test: helloworld.test
+Command: "/usr/bin/tcsh" "-c" "env PULP_CORE=riscv VSIM_DIR=/home/cairo/cernbox/GSOC2017/pulpino/vsim TB_TEST="" /opt/questasim/questasim/bin/vsim  -c -64 -do 'source tcl_files/run.tcl; run_and_exit;'"
+Directory: /home/cairo/cernbox/GSOC2017/pulpino/build/apps/helloworld/
+"helloworld.test" start time: Jun 26 17:08 CEST
+Output:
+----------------------------------------------------------
+ERROR: ld.so: object '/opt/questasim/questasim/lib/libfreetype.so.6.10.1' from LD_PRELOAD cannot be preloaded (wrong ELF class: ELFCLASS64): ignored.
+ERROR: ld.so: object '/opt/questasim/questasim/lib/libfreetype.so.6.10.1' from LD_PRELOAD cannot be preloaded (wrong ELF class: ELFCLASS64): ignored.
+Reading /mtitcl/vsim/pref.tcl 
+
+# 10.2b
+
+# source tcl_files/run.tcl 
+# vsim +nowarnTRAN +nowarnTSCALE +nowarnTFMPC +MEMLOAD=PRELOAD -L pulpino_lib -L apb_gpio_lib -L axi_slice_dc_lib -L apb_event_unit_lib -L axi_node_lib -L riscv_lib -L apb_pulpino_lib -L axi_mem_if_DP_lib -L apb_fll_if_lib -L axi_slice_lib -L apb_uart_lib -L apb_spi_master_lib -L apb_timer_lib -L axi2apb_lib -L axi_spi_slave_lib -L apb_i2c_lib -L adv_dbg_if_lib -L axi_spi_master_lib -L core2axi_lib -L apb_node_lib -L apb2per_lib {-voptargs=+acc -suppress 2103} -quiet -t ps -GTEST=\"\" tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "uart_receiver(rtl)".
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "uart_transmitter(rtl)".
+# ** Note: (vopt-143) Recognized 2 FSMs in architecture body "apb_uart(rtl)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "i2c_master_bit_ctrl(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_BR_allocator(fast)".
+# ** Note: (vopt-143) Recognized 2 FSMs in module "spi_slave_axi_plug(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "spi_slave_controller(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "core2axi(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "adbg_tap_top(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_write_only_ctrl(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_write_only_ctrl(fast__1)".
+# ** Note: (vopt-143) Recognized 2 FSMs in module "apb_spi_master(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_address_decoder_AW(fast)".
+# ** Note: (vopt-143) Recognized 2 FSMs in module "riscv_prefetch_buffer(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_BW_allocator(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "apb_fll_if(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "riscv_alu_div(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "i2c_master_byte_ctrl(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "generic_fifo(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "generic_fifo(fast__1)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "generic_fifo(fast__2)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "generic_fifo(fast__3)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "generic_fifo(fast__4)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "generic_fifo(fast__5)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "generic_fifo(fast__6)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "generic_fifo(fast__7)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "generic_fifo(fast__8)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "generic_fifo(fast__9)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "generic_fifo(fast__10)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "generic_fifo(fast__11)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "sleep_unit(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "spi_master_rx(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "i2c_eeprom_model(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "adbg_axi_module(fast)".
+# ** Note: (vopt-143) Recognized 2 FSMs in module "riscv_debug_unit(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "adbg_axi_biu(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "adbg_or1k_module(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "spi_master_controller(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "riscv_mult(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "riscv_load_store_unit(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "riscv_controller(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi2apb32(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_read_only_ctrl(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "axi_read_only_ctrl(fast__1)".
+# ** INTERNAL ERROR: vopt returned success but vsim could not find a design to simulate!
+# Error loading design
+Error loading design
+<end of output>
+Test time =   2.54 sec
+----------------------------------------------------------
+Test Failed.
+"helloworld.test" end time: Jun 26 17:08 CEST
+"helloworld.test" time elapsed: 00:00:02
+----------------------------------------------------------
+

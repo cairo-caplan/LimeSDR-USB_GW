@@ -152,7 +152,7 @@ module axi_node_intf_wrap
   generate
     genvar i;
     for(i = 0; i < NB_MASTER; i++)
-    begin
+    begin : for_gen
       assign                        master[i].aw_id[AXI_ID_WIDTH_INIT-1:0] = s_master_aw_id[i];
       assign                        master[i].aw_addr                      = s_master_aw_addr[i];
       assign                        master[i].aw_len                       = s_master_aw_len[i];
@@ -210,7 +210,7 @@ module axi_node_intf_wrap
   generate
     genvar j;
     for(j = 0; j < NB_SLAVE; j++)
-    begin
+    begin : for_gen1
       assign s_slave_aw_id[j]     = slave[j].aw_id[AXI_ID_WIDTH_TARG-1:0];
       assign s_slave_aw_addr[j]   = slave[j].aw_addr;
       assign s_slave_aw_len[j]    = slave[j].aw_len;

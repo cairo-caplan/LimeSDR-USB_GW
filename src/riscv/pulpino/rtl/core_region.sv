@@ -18,8 +18,8 @@ module core_region
     parameter AXI_ID_MASTER_WIDTH  = 10,
     parameter AXI_ID_SLAVE_WIDTH   = 10,
     parameter AXI_USER_WIDTH       = 0,
-    parameter DATA_RAM_SIZE        = 32768, // in bytes
-    parameter INSTR_RAM_SIZE       = 32768  // in bytes
+    parameter DATA_RAM_SIZE        = 2048, //32768, // in bytes
+    parameter INSTR_RAM_SIZE       = 2048 //32768  // in bytes
   )
 (
     // Clock and Reset

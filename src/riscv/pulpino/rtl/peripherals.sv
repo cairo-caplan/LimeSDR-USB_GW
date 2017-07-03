@@ -131,7 +131,7 @@ module peripherals
 
   generate
      genvar i;
-       for (i = 0; i < APB_NUM_SLAVES; i = i + 1) begin
+       for (i = 0; i < APB_NUM_SLAVES; i = i + 1) begin : for_gen
         cluster_clock_gating core_clock_gate
         (
           .clk_o     ( clk_int[i]                    ),

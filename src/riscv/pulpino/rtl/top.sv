@@ -75,7 +75,7 @@ module pulpino_top
     input  logic       [31:0] gpio_in,
     output logic       [31:0] gpio_out,
     output logic       [31:0] gpio_dir,
-    output logic [31:0] [5:0] gpio_padcfg,
+    //output logic [31:0] [5:0] gpio_padcfg,/////
 
     // JTAG signals
     input  logic              tck_i,
@@ -85,7 +85,7 @@ module pulpino_top
     output logic              tdo_o,
 
     // PULPino specific pad config
-    output logic [31:0] [5:0] pad_cfg_o,
+    //output logic [31:0] [5:0] pad_cfg_o, /////
     output logic       [31:0] pad_mux_o
   );
 
@@ -105,6 +105,9 @@ module pulpino_top
   logic        cfgweb_n_fll_int;
   logic        rstn_int;
   logic [31:0] boot_addr_int;
+  
+  logic [31:0] [5:0] gpio_padcfg;
+  logic [31:0] [5:0] pad_cfg_o;
 
   AXI_BUS
   #(

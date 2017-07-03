@@ -1,0 +1,180 @@
+#-----------------------------------------------------------
+# hsi v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:19:00 MDT 2015
+# 
+# Start of session at: Mon Jun 26 18:13:57 2017
+# Process ID: 11446
+# Log file: /home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/hsi.log
+# Journal file: /home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/hsi.jou
+#-----------------------------------------------------------
+source ./fsbl.tcl
+# open_hw_design ./pulpemu_top.sysdef
+# generate_app -hw pulpemu_top -os standalone -proc ps7_cortexa9_0 -app zynq_fsbl -compile -sw fsbl -dir ./fsbl
+INFO: [Hsi 55-1698] elapsed time for repository loading 17 seconds
+gmake[2]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp'
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src'
+Running Make include in ps7_cortexa9_0/libsrc/xilffs_v3_0/src
+Running Make include in ps7_cortexa9_0/libsrc/spips_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/spips_v3_0/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/spips_v3_0/src'
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/gpiops_v3_0/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/gpiops_v3_0/src'
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_4/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/sdps_v2_4/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/sdps_v2_4/src'
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_2/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_2/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/emacps_v3_0/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/emacps_v3_0/src'
+Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/ttcps_v3_0/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/ttcps_v3_0/src'
+Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilrsa_v1_1/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilrsa_v1_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scugic_v3_0/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scugic_v3_0/src'
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_1/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/usbps_v2_2/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/usbps_v2_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/gpio_v4_0/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/gpio_v4_0/src'
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/standalone_v5_0/src'
+gmake[4]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/standalone_v5_0/src/profile'
+gmake[4]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/standalone_v5_0/src/profile'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/standalone_v5_0/src'
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_1/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_1/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_1/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src'
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/qspips_v3_2/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/qspips_v3_2/src'
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/uartps_v3_0/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/uartps_v3_0/src'
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src'
+Compiling coresightps_dcc
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src'
+Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilffs_v3_0/src'
+Compiling XilFFs Library
+Creating archive libxilffs.a
+make[4]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilffs_v3_0/src'
+make[4]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilffs_v3_0/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilffs_v3_0/src'
+Running Make libs in ps7_cortexa9_0/libsrc/spips_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/spips_v3_0/src'
+Compiling spips
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/spips_v3_0/src'
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/gpiops_v3_0/src'
+Compiling gpiops
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/gpiops_v3_0/src'
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_4/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/sdps_v2_4/src'
+Compiling sdps
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/sdps_v2_4/src'
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_2/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_2/src'
+Compiling devcfg
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/emacps_v3_0/src'
+Compiling emacps
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/emacps_v3_0/src'
+Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/ttcps_v3_0/src'
+Compiling ttcps
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/ttcps_v3_0/src'
+Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilrsa_v1_1/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilrsa_v1_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scugic_v3_0/src'
+Compiling scugic
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scugic_v3_0/src'
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_1/src'
+Compiling scuwdt
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/usbps_v2_2/src'
+Compiling usbps
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/usbps_v2_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/gpio_v4_0/src'
+Compiling gpio
+make[4]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/gpio_v4_0/src'
+make[4]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/gpio_v4_0/src'
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/gpio_v4_0/src'
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/standalone_v5_0/src'
+Compiling standalone
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/standalone_v5_0/src'
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_1/src'
+Compiling scutimer
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_1/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_1/src'
+Compiling xadcps
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+Compiling dmaps
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src'
+Compiling cpu_cortexa9
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src'
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/qspips_v3_2/src'
+Compiling qspips
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/qspips_v3_2/src'
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_0/src
+gmake[3]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/uartps_v3_0/src'
+Compiling uartps
+gmake[3]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/uartps_v3_0/src'
+Finished building libraries
+gmake[2]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl/zynq_fsbl_bsp'
+hsi::generate_target: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 428.598 ; gain = 128.000 ; free physical = 142 ; free virtual = 10525
+gmake[2]: Entering directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl'
+arm-xilinx-eabi-gcc  -MMD -MP -c pcap.c -o pcap.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-xilinx-eabi-gcc  -MMD -MP -c ps7_init.c -o ps7_init.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-xilinx-eabi-gcc  -MMD -MP -c qspi.c -o qspi.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-xilinx-eabi-gcc  -MMD -MP -c rsa.c -o rsa.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-xilinx-eabi-gcc  -MMD -MP -c main.c -o main.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-xilinx-eabi-gcc  -MMD -MP -c fsbl_hooks.c -o fsbl_hooks.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-xilinx-eabi-gcc  -MMD -MP -c md5.c -o md5.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-xilinx-eabi-gcc  -MMD -MP -c image_mover.c -o image_mover.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-xilinx-eabi-gcc  -MMD -MP -c nor.c -o nor.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-xilinx-eabi-gcc  -MMD -MP -c nand.c -o nand.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-xilinx-eabi-gcc  -MMD -MP -c sd.c -o sd.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-xilinx-eabi-gcc  -MMD -MP -c fsbl_handoff.S -o fsbl_handoff.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+arm-xilinx-eabi-gcc -o executable.elf  pcap.o  ps7_init.o  qspi.o  rsa.o  main.o  fsbl_hooks.o  md5.o  image_mover.o  nor.o  nand.o  sd.o  fsbl_handoff.o   -MMD -MP -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group  -Wl,--gc-sections -Lzynq_fsbl_bsp/ps7_cortexa9_0/lib -L./ -Tlscript.ld
+gmake[2]: Leaving directory '/home/cairo/cernbox/GSOC2017/pulpino/fpga/sw/hsi/fsbl'
+hsi::generate_app: Time (s): cpu = 00:00:23 ; elapsed = 00:00:48 . Memory (MB): peak = 428.598 ; gain = 128.000 ; free physical = 141 ; free virtual = 10523
+# exit
+INFO: [Common 17-206] Exiting hsi at Mon Jun 26 18:14:49 2017...

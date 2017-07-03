@@ -1,0 +1,41 @@
+# //  Questa Sim-64
+# //  Version 10.2b linux_x86_64 May 16 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# source tcl_files/run.tcl 
+# vsim +nowarnTRAN +nowarnTSCALE +nowarnTFMPC +MEMLOAD=PRELOAD -L pulpino_lib -L apb_gpio_lib -L axi_slice_dc_lib -L apb_event_unit_lib -L axi_node_lib -L riscv_lib -L apb_pulpino_lib -L axi_mem_if_DP_lib -L apb_fll_if_lib -L axi_slice_lib -L apb_uart_lib -L apb_spi_master_lib -L apb_timer_lib -L axi2apb_lib -L axi_spi_slave_lib -L apb_i2c_lib -L adv_dbg_if_lib -L axi_spi_master_lib -L core2axi_lib -L apb_node_lib -L apb2per_lib {-voptargs=+acc -suppress 2103} -quiet -t ps -GTEST=\"\" tb 
+#  
+add wave -position end sim:/tb/uart/*
+add wave -position end  sim:/tb/top_i/core_region_i/axi_mem_addr
+add wave -position end  sim:/tb/top_i/core_region_i/axi_mem_we
+add wave -position end  sim:/tb/top_i/core_region_i/axi_mem_be
+add wave -position end  sim:/tb/top_i/core_region_i/axi_mem_rdata
+add wave -position end  sim:/tb/top_i/core_region_i/axi_mem_wdata
+add wave -position end  sim:/tb/top_i/core_region_i/axi_instr_req
+add wave -position end  sim:/tb/top_i/core_region_i/axi_instr_addr
+add wave -position end  sim:/tb/top_i/core_region_i/axi_instr_we
+add wave -position end  sim:/tb/top_i/core_region_i/axi_instr_be
+add wave -position end  sim:/tb/top_i/core_region_i/axi_instr_rdata
+add wave -position end  sim:/tb/top_i/core_region_i/axi_instr_wdata
+run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb/top_i/peripherals_i/i_apb_uart/UART_RXFF
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb/top_i/peripherals_i/i_apb_uart/UART_TXFF
+# Using MEMLOAD method: PRELOAD
+# [SPI] Enabling QPI mode
+# [adv_dbg_if] AXI4 WRITE         32 burst @1a107008 for           4 bytes.
+# Preloading memory
+# Preloading instruction memory from slm_files/l2_stim.slm
+# Preloading data memory from slm_files/tcdm_bank0.slm
+# [TRACER] Output filename is: trace_core_00_0.log
+# RX string: Hello World!!!!!                                                                                                                                                                                                                                                
+# [SPI] Received 00000000
+# Test OK
+# Break in Module tb at /home/cairo/cernbox/GSOC2017/pulpino/vsim/..//tb/tb.sv line 313

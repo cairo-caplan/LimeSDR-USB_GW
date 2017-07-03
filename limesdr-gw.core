@@ -1,0 +1,187 @@
+CAPI=2:
+name : ::limesdr-gw
+description: OpenRISC-based SoC for the Terasic de0 nano board
+#Need use-flag section. Description for each flag (or put them in parameters
+#Boolean restriction (one-of, or, and)
+#Only defined use-flags can be used. In addition to the ones explicitly defined
+#here, FuseSoC probably needs to define a few implicit ones, such as running
+#fusesoc sim --sim=icarus --testbench=de0_nano_core_tb de0_nano will set
+#tool_icarus, flow_simulation (not sure about that one), target_de0_nano_core_tb
+
+#FuseSoC is responsible for parsing strings with use flags. Or is it worth
+#exploring some way to create yaml syntax for this?
+
+#TODO: vpi, scripts, default tb, default simulator
+filesets:
+  #Not sure if use-flag conditionals will work for files
+  #What happens if it's undefined and has options such as is_include_file
+  #
+
+  #No need to be a list. Ordered by appearance in target
+  core_files:
+    files:
+      - a:
+        is_include_file: true
+      - sw/clear_r3_and_jump_to_0x100.vh:
+          is_include_file : true
+          file_type : verilogSource-2005
+      - sw/spi_uimage_loader.vh:
+          is_include_file : true
+      - rtl/verilog/wb_intercon.v
+      - rtl/verilog/wb_intercon_dbg.v
+      - rtl/verilog/wb_intercon.vh:
+          is_include_file
+      - rtl/verilog/wb_intercon_dbg.vh:
+          is_include_file
+      - rtl/verilog/de0_nano_core.v
+    file_type: verilogSource
+    depend:
+      - adv_debug_sys
+      - gpio
+      - ">=i2c-1.13"
+      - ">=jtag_tap-1.13"
+      - mor1kx
+      - ">=or1k_bootloaders-0.9"
+      - ">=simple_spi-1.6"
+      - ">=uart16550-1.5.4"
+      - ">=wb_intercon-1.0"
+      - ">=wb_ram-1.0"
+      - ">=wb_sdram_ctrl-r2"
+
+  top_files:
+    files:
+      - backend/rtl/verilog/pll.v
+      - rtl/verilog/rst_sync.v
+      - rtl/verilog/clkgen.v
+      - rtl/verilog/de0_nano_top.v
+    file_type : verilogSource
+    depend:
+      - altera_virtual_jtag
+
+  core_tb_files:
+    files :
+      - bench/de0_nano_core_tb.v
+      - bench/spi_image.vh[is_include_file]
+      - bench/test-defines.v[is_include_file]
+    file_type : verilogSource
+    depend:
+      #isim and xsim doesn't handle vpi
+      #Or should we solve this in elf-loader instead and create a dpi object
+      #for xsim? Might be too complex
+      #We also want to disable on windows
+      - "!isim? (!xsim? (elf-loader))"
+      - "!isim? (!xsim? (jtag_vpi-r2))"
+      - ">=vlog_tb_utils-1.0"
+
+  top_tb_files:
+    files:
+      - bench/de0_nano_top_tb.v
+    file_type: verilogSource
+    depend:
+      - mt48lc16m16a2
+      - "!spi_model ? ( s25fl064p-1.7)"
+
+  contraints :
+    files:
+      #Still allow short-hand syntax for file_type etc?
+      #Risk that it might make parsing more complicated and interfere with
+      #useflag syntax
+      - data/de0_nano.sdc[file_type=SDC]
+      - data/pinmap.tcl[file_type=tclSource]
+
+build:
+  toplevel   : de0_nano_top
+  filesets   :
+    - core_files
+    - top_files
+    - constraints
+  quartus:
+    family     : "Cyclone IV E"
+    device     : EP4CE22F17C6
+
+#Merge testbenches/targets somehow
+#Do we need to distinguish them?
+#How to set default build/sim target?
+sim:
+  
+  tb_de0_nano_core: &core
+    toplevel : de0_nano_core_tb
+    #Setting defines is common enough so that there perhaps should
+    #be a separate section for that, to avoid specifying the same stuff
+    #for all simulators. Same with timescale and perhaps libraries
+    filesets:
+      - core_files
+      - core_tb_files
+    icarus:
+      iverilog_options : -DICARUS_SIM -DSIM -DSPEEDSIM
+    modelsim:
+      vlog_options : +define+SIM +define+MODELSIM_SIM -timescale 1ns/1ps
+      vsim_options : -L altera_mf_ver -L altera_mf
+    #Is this a good idea to request vpi libraries here? I think it should be ok
+    vpi:
+      - !isim? (!xsim? (elf-loader))
+      - !isim? (!xsim? (jtag_vpi))
+      
+  de0_nano_top:
+    <<: *core #This will inherit the modelsim settings
+    toplevel : de0_nano_tb
+    #These filesets will be added to the ones in the "*" target. Not sure it's
+    #worth the extra complexity of having a "*" target. Maybe can revisit this
+    #later
+    filesets:
+      - core_files
+      - core_tb_files 
+      - top_tb_files
+    icarus:
+      #How do we signal that this tb is not supported by Icarus (due to encrypted altera libs). Perhaps...
+      supported: false
+      #...or...
+      error: This testbench is not supported by Icarus due to reasons
+
+parameters:
+  bootrom_file:
+    datatype    : file
+    default     : ../src/de0_nano_0/sw/clear_r3_and_jump_to_0x100.vh
+    description : Initial boot ROM contents (in Verilog hex format)
+    paramtype   : vlogparam
+    scope       : private
+
+  spi_flash_file:
+    datatype    : file
+    default     : ../src/de0_nano_0/bench/spi_image.vh
+    description : Initial SPI Flash contents (in Verilog hex format)
+    paramtype   : vlogparam
+    scope       : private
+
+  spi_model:
+    datatype    : bool
+    description : Use SPI Flash model in simulations
+    paramtype   : useflag
+    scope       : private
+
+  #elf-loader is a good example of a deep dependency that we want to disable
+  #on windows
+  elf-loader:
+    datatype    : bool
+    default     : true #How do we disable with CLI? --no-elf-loader? --elf-loader=false
+    description : Enable ELF loader
+    paramtype   : useflag
+    scope       : private
+  #Place use flags here as well? They are a type of parameter, but quite
+  #different from the other cases. Maybe do the other way around and
+  #only allow useflags, and let that decide value of vlogparams, `defines etc.
+
+  #Also, should parameters also be target-specific?
+
+#Move provider/patches outside the file? How about meson wrap files?
+provider:
+  github:
+    name = olofk
+
+patches:
+  - files/do_stuff.diff
+
+#scripts will need some thinking. Likely just put them in the targets and maybe
+#the scripts themselves in the fileset
+#Need to define phases
+#pre/post for export, setup, build, run ?

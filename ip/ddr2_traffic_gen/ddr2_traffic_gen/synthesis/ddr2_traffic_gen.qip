@@ -2,7 +2,7 @@ set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -na
 set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name IP_TOOL_VERSION "15.1"
 set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "ddr2_traffic_gen" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../ddr2_traffic_gen.sopcinfo"]
-set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name SLD_INFO "QSYS_NAME ddr2_traffic_gen HAS_SOPCINFO 1 GENERATION_ID 1476969150"
+set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name SLD_INFO "QSYS_NAME ddr2_traffic_gen HAS_SOPCINFO 1 GENERATION_ID 1498440808"
 set_global_assignment -library "ddr2_traffic_gen" -name MISC_FILE [file join $::quartus(qip_path) "../ddr2_traffic_gen.cmp"]
 set_global_assignment -library "ddr2_traffic_gen" -name SLD_FILE [file join $::quartus(qip_path) "ddr2_traffic_gen.debuginfo"]
 set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name IP_TARGETED_DEVICE_FAMILY "Cyclone IV E"
@@ -15,7 +15,7 @@ set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -na
 set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTQ3Njk2OTE1MA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTQ5ODQ0MDgwOA==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBJViBF::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::RVA0Q0U0MEYyM0M4::QXV0byBERVZJQ0U="
 set_global_assignment -entity "ddr2_traffic_gen" -library "ddr2_traffic_gen" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::OA==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="

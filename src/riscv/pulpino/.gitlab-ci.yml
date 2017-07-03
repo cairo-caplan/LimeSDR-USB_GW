@@ -1,0 +1,26 @@
+stages:
+  - build
+  - test
+
+before_script:
+  - ./ci/setup.csh
+
+rtl_riscv:
+  stage: test
+  script:
+    - ./ci/rtl-riscv.csh
+
+rtl_sequential:
+  stage: test
+  script:
+    - ./ci/rtl-sequential.csh
+
+rtl_riscv_rvc:
+  stage: test
+  script:
+    - ./ci/rtl-riscv-rvc.csh
+
+rtl_sequential_rvc:
+  stage: test
+  script:
+    - ./ci/rtl-sequential-rvc.csh
