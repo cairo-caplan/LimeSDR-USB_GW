@@ -6,16 +6,15 @@ The gateware can be built with the free version of the Altera Quartus tools.
 
 ## Branches
 
-This repository contains the following hardware-specific branches:
+This branch, named [fusesoc-nios](https://github.com/cairo-caplan/LimeSDR-USB_GW/tree/fusesoc-nios) contains a FuseSoC proposal for the original LimeSDR-USB FPGA gateware, still based on a NIOS II CPU. 
 
-* master:
-  * Compiled gateware file for Hardware Revision 1v4 is output_files/LimeSDR-USB_lms7_trx_HW_1.4.rbf.
-  
-* HW_v1.3-v1.0:
-  * Compiled gateware file for Hardware Revision 1v3 is output_files/LimeSDR-USB_lms7_trx_HW_1.3.rbf.
-  * Compiled gateware file for Hardware Revision 1v2 is output_files/LimeSDR-USB_lms7_trx_HW_1.2.rbf.
-  * Compiled gateware file for Hardware Revision 1v1 is output_files/LimeSDR-USB_lms7_trx_HW_1.1.rbf.
-  * Compiled gateware file for Hardware Revision 1v0 is output_files/LimeSDR-USB_lms7_trx_HW_1.0.rbf.
+It can be built after installing fusesoc and running the following code:
+
+```bash
+fusesoc --cores-root .  build limesdr-usb_gw
+```
+
+However it fails on the pin and IO bank assignements for now.
 
 ## Licensing
 

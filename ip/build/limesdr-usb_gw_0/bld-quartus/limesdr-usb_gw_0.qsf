@@ -1,0 +1,160 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+# Date created = 00:55:34  March 26, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		limesdr-usb_gw_0_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE40F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY lms7_trx_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:55:34  MARCH 26, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION 15.1.0
+set_global_assignment -name QIP_FILE "../src/limesdr-usb_gw_0/ip/pll_reconfig_module/pll_reconfig_module.qip"
+set_global_assignment -name QIP_FILE "../src/limesdr-usb_gw_0/lms_ctr/synthesis/lms_ctr.qip"
+set_global_assignment -name QIP_FILE "../src/limesdr-usb_gw_0/ip/ddr2/ddr2.qip"
+set_global_assignment -name QIP_FILE "../src/limesdr-usb_gw_0/software/lms_ctr_app/mem_init/meminit.qip"
+set_global_assignment -name QIP_FILE "../src/limesdr-usb_gw_0/ip/clkctrl/clkctrl/synthesis/clkctrl.qip"
+set_global_assignment -name QIP_FILE "../src/limesdr-usb_gw_0/ip/ddr2_traffic_gen/ddr2_traffic_gen/synthesis/ddr2_traffic_gen.qip"
+set_global_assignment -name QIP_FILE "../src/limesdr-usb_gw_0/ip/ddo/ddrox1.qip"
+set_global_assignment -name QIP_FILE "../src/limesdr-usb_gw_0/ip/pll/pll.qip"
+set_global_assignment -name QIP_FILE "../src/limesdr-usb_gw_0/ip/fpga_pll/fpga_pll.qip"
+set_global_assignment -name QIP_FILE "../src/limesdr-usb_gw_0/ip/txpll/txpll.qip"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/lms7_trx_top.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/symbols/rx_synchronizers.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/symbols/tx_synchronizers.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/general_pkg.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/pulse_gen/synth/pulse_gen.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/fifo2diq/synth/txiq_ctrl.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_pll_top/synth/tx_pll_top.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_pll_top/synth/rx_pll_top.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/altera_inst/lms7002_ddout.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/handshake_sync/synth/handshake_sync.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/tx_path/synth/tx_path_top.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/tx_path/synth/sync_fifo_rw.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/packets2data/synth/packets2data_top.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/packets2data/synth/packets2data.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/packets2data/synth/p2d_wr_fsm.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/packets2data/synth/p2d_sync_fsm.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/packets2data/synth/p2d_rd_fsm.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/packets2data/synth/p2d_clr_fsm.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/fifo2diq/synth/txiq.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/fifo2diq/synth/fifo2diq.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/bit_unpack/synth/unpack_64_to_64.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/bit_unpack/synth/unpack_64_to_56.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/bit_unpack/synth/unpack_64_to_48.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_path_top/bit_unpack/synth/bit_unpack_64.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/bus_sync_reg.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/altera_inst/lpm_cnt_inst.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/altera_inst/lms7002_ddin.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/altera_inst/fifo_inst.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/smpl_cnt/synth/smpl_cnt.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/rx_path/synth/rx_path_top.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/diq2fifo/synth/test_data_dd.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/diq2fifo/synth/rxiq_siso_sdr.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/diq2fifo/synth/rxiq_siso_ddr.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/diq2fifo/synth/rxiq_siso.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/diq2fifo/synth/rxiq_pulse_ddr.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/diq2fifo/synth/rxiq_mimo_ddr.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/diq2fifo/synth/rxiq_mimo.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/diq2fifo/synth/rxiq.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/diq2fifo/synth/diq2fifo.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/data2packets/synth/data2packets_top.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/data2packets/synth/data2packets_fsm.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/data2packets/synth/data2packets.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/bit_pack/synth/pack_56_to_64.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/bit_pack/synth/pack_48_to_64.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/rx_path_top/bit_pack/synth/bit_pack.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/gpio_ctrl_top.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/txiqmux/synth/txiqmux.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/txiqmux/synth/txiq_tst_ptrn.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/busy_delay.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/nios_cpu/nios_cpu.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/fx3/slaveFIFO5b/slaveFIFO5b.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/fx3/slaveFIFO5b/FX3_slaveFIFO5b_top.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/FX3_LED_ctrl.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/revision/revision.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/rstn_pulse.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/wfm_ram_buffer/wfm_wcmd_fsm.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/wfm_ram_buffer/wfm_rcmd_fsm.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/wfm_ram_buffer/wfm_player_top.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/wfm_ram_buffer/wfm_player.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/wfm_ram_buffer/wfm_pct_gen.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/wfm_ram_buffer/pct_payload_extrct.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/wfm_ram_buffer/ddr2_data_check.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/wfm_ram_buffer/LFSR.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/wfm_ram_buffer/ddr2_cmdfifo_tst.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/wfm_ram_buffer/DDR2_ctrl_top.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/wfm_ram_buffer/DDR2_arb.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/spi/pllcfg.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/testing/pkt_tester.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/my_busmux.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/reg_phase_shift/simple_reg.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/reg_phase_shift/phase_shift.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/data_manipulation/decompress.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/wfm_ram_buffer/sl_ctrl.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/dyn_ps/pll_ps_cntrl.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/pll_reconfig_ctrl/config_ctrl.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/spi/miso_mux.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/spi/mem_package.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/spi/mcfg32wm_fsm.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/spi/mcfg_components.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/alive.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/synchronizer.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/capture_signal.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/bus_synch.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/testing/fx3_fifo_data.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/pll_reconfig_ctrl/pll_reconfig_status.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/spi/pllcfg_top.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/spi/fpgacfg.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/my_sw.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/tx_modules/rd_tx_fifo.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/self_test/ddr2_tester.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/self_test/tstcfg.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/FPGA_LED1_cntrl.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/FPGA_LED2_ctrl.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/self_test/clock_test.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/self_test/clk_no_ref_test.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/self_test/clk_with_ref_test.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/self_test/singl_clk_with_ref_test.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/self_test/transition_count.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/stream/stream_switch.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/sync_reg.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/general/gpio_ctrl.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/spi/periphcfg.vhd"
+set_global_assignment -name VHDL_FILE "../src/limesdr-usb_gw_0/src/soc_wrapper.vhd"
+set_global_assignment -name SDC_FILE "../src/limesdr-usb_gw_0/FX3_timing.sdc"
+set_global_assignment -name SDC_FILE "../src/limesdr-usb_gw_0/lms7_trx_timing.sdc"
